@@ -1,4 +1,5 @@
 import RegularList from "./components/Lists/RegularList.tsx";
+import Modal from "./components/Modal.tsx";
 import SplitScreen from "./components/SplitScreen.tsx";
 import LargeAuthorItem from "./components/authors/LargeListItem.tsx";
 import SmallAuthorItem from "./components/authors/SmallListItem.tsx";
@@ -31,6 +32,10 @@ const App = () => {
       <p className="mt-6">Books List</p>
       <RegularList items={books} ItemComponent={LargeListItem} />
       <RegularList items={books} ItemComponent={SmallListItem} />
+
+      <Modal>
+        <LargeListItem data={books[0]} />
+      </Modal>
     </>
   );
 };
