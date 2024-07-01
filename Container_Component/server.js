@@ -1,7 +1,6 @@
 const express = require("express");
 
 const app = express();
-
 app.use(express.json());
 
 let currentUser = {
@@ -81,5 +80,5 @@ app.get("/books/:id", (req, res) => {
 
 let SERVER_PORT = 9090;
 app.listen(SERVER_PORT, () =>
-  console.log(`Server is listening on port: ${SERVER_PORT}`)
+  console.log(`Server is listening on port: ${SERVER_PORT}`),
 );
