@@ -9,6 +9,7 @@ const UserInfoWithLoader = includeUser(UserInfo, "3");
 function App() {
   return (
     <>
+      <UserInfo userId={"1"} /> // for custom hook
       <UserInfoWrapper test="test" b="I am b" />
       <UserInfoWithLoader />
       <UserInfoForm />

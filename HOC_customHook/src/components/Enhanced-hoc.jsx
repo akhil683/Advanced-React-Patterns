@@ -17,7 +17,7 @@ export const EnhancedUpdateResource = (
         const response = await axios.get(resourceUrl);
         setInitialResource(response.data);
       })();
-    });
+    }, [resourceUrl]);
 
     const onChange = (updates) => {
       setResource({ ...resource, ...updates });
